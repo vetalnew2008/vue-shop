@@ -17,7 +17,7 @@ let store = new Vuex.Store({
       GET_PRODUCTS_FROM_API({
          commit
       }) {
-         return axios('https://jsonplaceholder.typicode.com/photos?_limit=30', {
+         return axios('https://jsonplaceholder.typicode.com/photos?_limit=15git', {
                method: "GET"
             })
             .then((products) => {
