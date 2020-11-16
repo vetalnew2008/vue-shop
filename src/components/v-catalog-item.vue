@@ -3,10 +3,7 @@
     <img class="v-catalog-item__image" :src="product_data.url" alt="" />
     <h3 class="v-catalog-item__name">{{ product_data.title }}</h3>
     <p class="v-catalog-item__price">Price: {{ product_data.title }} eura</p>
-    <button
-      class="v-catalog-item__add_to_cart_btn btn"
-      @click="sendDataToParent"
-    >
+    <button class="v-catalog-item__add_to_cart_btn btn" @click="addToCart">
       add to cart
     </button>
   </div>
@@ -30,8 +27,8 @@ export default {
     };
   },
   methods: {
-    sendDataToParent() {
-      this.$emit("send-id", this.product_data.id);
+    addToCart() {
+      this.$emit("addToCart", this.product_data);
     },
   },
 };
